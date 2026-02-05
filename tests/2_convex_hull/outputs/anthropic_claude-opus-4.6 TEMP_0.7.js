@@ -1,0 +1,33 @@
+async function findConvexHull(points) {
+  const _ = (await import("https://cdn.jsdelivr.net/npm/lodash-es/lodash.js")).default;
+
+  const unique = _.uniqWith(points, _.isEqual);
+  const sorted = _.sortBy(unique, ["x", "y"]);
+
+  if (sorted.length <= 1) return sorted;
+
+  const cross = (O, A, B) =>
+    (A.x - O.x) * (B.y - O.y) - (A.y - O.y) * (B.x - O.x);
+
+  const lower = [];
+  for (const p of sorted) {
+    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], p) <= 0)
+      lower.pop();
+    lower.push(p);
+  }
+
+  const upper = [];
+  for (const p of _.reverse([...sorted])) {
+    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], p) <= 0)
+      upper.pop();
+    upper.push(p);
+  }
+
+  lower.pop();
+  upper.pop();
+
+  return [...lower, ...upper];
+}
+export default findConvexHull;
+// Generation time: 5.094s
+// Result: PASS
