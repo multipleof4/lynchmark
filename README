@@ -9,17 +9,14 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+anthropic/claude-opus-4.6
 moonshotai/kimi-k2.5
-minimax/minimax-m2.1
 z-ai/glm-4.7
 google/gemini-3-flash-preview TEMP:0.35
 openai/gpt-5.2
 deepseek/deepseek-v3.2
 google/gemini-3-pro-preview TEMP:0.35
 anthropic/claude-opus-4.5 TEMP:0.7
-openai/gpt-5.1-codex-max
 x-ai/grok-4
 anthropic/claude-sonnet-4.5 TEMP:0.7
-moonshotai/kimi-k2-thinking
-minimax/minimax-m2
 <!-- MODELS_END -->
