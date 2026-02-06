@@ -2,9 +2,6 @@ name: Cleanup Stale Outputs
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'README'
 
 jobs:
   cleanup:
