@@ -72,7 +72,11 @@ const main = async () => {
   if (sModel && !allModels.includes(sModel)) throw new Error(`Model "${sModel}" not found in README.`);
   const models = sModel ? [sModel] : allModels;
 
-  const testDirs = (await fs.readdir(TESTS, { withFileTypes: true })).filter(d => d.isDirectory()).map(d => d.name).sort();
+  const testDirs = (await fs.readdir(TESTS, { withFileTypes: true }))
+    .filter(d => d.isDirectory())
+    .map(d => d.name)
+    .sort((a, b) => parseInt(a) - parseInt(b));
+    
   let targetTests = [];
   
   const candidates = sTest 
