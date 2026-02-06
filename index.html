@@ -92,7 +92,7 @@
       
       const testsRes=await fetch('https://api.github.com/repos/multipleof4/lynchmark/contents/tests');
       const testsData=await testsRes.json();
-      const tests=testsData.filter(d=>d.type==='dir').map(d=>d.name).sort();
+      const tests=testsData.filter(d=>d.type==='dir').map(d=>d.name).sort((a,b)=>parseInt(a)-parseInt(b));
 
       for(const model of models){
         const sModel=model.replace(/[\/:]/g,'_');
