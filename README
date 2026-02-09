@@ -9,6 +9,7 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+openrouter/aurora-alpha
 openrouter/pony-alpha
 anthropic/claude-opus-4.6
 moonshotai/kimi-k2.5
