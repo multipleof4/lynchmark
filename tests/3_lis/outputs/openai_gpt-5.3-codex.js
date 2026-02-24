@@ -1,4 +1,4 @@
 
 export default findLISLength;
-// Generation time: 1.018s
+// Generation time: 0.821s
 // Result: FAIL

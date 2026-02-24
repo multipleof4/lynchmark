@@ -1,4 +1,4 @@
 
 export default findShortestPath;
-// Generation time: 1.770s
+// Generation time: 0.986s
 // Result: FAIL

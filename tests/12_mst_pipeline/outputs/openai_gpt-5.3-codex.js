@@ -1,4 +1,4 @@
 
 export default computeMST;
-// Generation time: 0.432s
+// Generation time: 0.998s
 // Result: FAIL
