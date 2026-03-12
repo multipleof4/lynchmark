@@ -1,0 +1,4 @@
+async function processCSV(c,e){const{p}=await import('https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js');let r=p.parse(c,{header:true,skipEmptyLines:true}).data,f=r.filter(x=>x[e.filterColumn]==e.filterValue),m=new Map,g=e.groupBy,a=e.aggregateColumn,o=e.operation;for(let i of f){let k=i[g]??'',v=Number(i[a])||0;if(!m.has(k))m.set(k,o==='count'?0:{s:0,c:0});let t=m.get(k);if(o==='count')t++;else{t.s+=v;t.c++}}let res=[];for(let[k,t]of m){let val=o==='count'?t:o==='sum'?t.s:t.s/t.c;res.push({[g]:k,result:val})}return res}
+export default processCSV;
+// Generation time: 1.489s
+// Result: FAIL
