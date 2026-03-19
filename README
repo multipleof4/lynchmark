@@ -9,8 +9,8 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+minimax/minimax-m2.7
 x-ai/grok-4.20-beta
-openrouter/hunter-alpha
 openai/gpt-5.4
 google/gemini-3.1-flash-lite-preview
 openai/gpt-5.3-codex
