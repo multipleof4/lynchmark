@@ -9,6 +9,7 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+moonshotai/kimi-k2.6
 anthropic/claude-opus-4.7 EFF:medium
 z-ai/glm-5.1
 x-ai/grok-4.20-beta
