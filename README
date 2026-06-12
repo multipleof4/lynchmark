@@ -9,6 +9,7 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+anthropic/claude-fable-5
 anthropic/claude-opus-4.8 EFF:medium
 google/gemini-3.5-flash
 google/gemini-3.1-flash-lite
