@@ -26,7 +26,13 @@ const apiCall = async (prompt, model, temp, effort) => {
       ...(temp !== undefined && { temperature: temp }),
       ...(effort && { reasoning: { effort } })
     },
-    { headers: { Authorization: `Bearer ${process.env.OPENROUTER_KEY}` } }
+    { 
+      headers: { 
+        Authorization: `Bearer ${process.env.OPENROUTER_KEY}`,
+        'HTTP-Referer': 'https://lynchmark.com',
+        'X-Title': 'Lynchmark'
+      } 
+    }
   );
   if (!res.data.choices || !res.data.choices[0]) {
     console.error('API Response:', JSON.stringify(res.data, null, 2));
