@@ -9,6 +9,7 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+anthropic/claude-sonnet-5 EFF:high
 z-ai/glm-5.2
 moonshotai/kimi-k2.7-code
 anthropic/claude-fable-5
