@@ -1,0 +1,4 @@
+async function processCSV(c,g){const{filterColumn:f,filterValue:v,groupBy:b,aggregateColumn:a,operation:o}=g;const P=(await import('https://esm.sh/papaparse')).default;const L=(await import('https://esm.sh/lodash')).default;const{data:d}=P.parse(c,{header:1,skipEmptyLines:1});const r=L.filter(d,x=>x[f]==v);const m=L.groupBy(r,b);return Object.entries(m).map(([k,s])=>{let e;if(o=='count')e=s.length;else{const n=s.map(x=>{const t=+x[a];return isNaN(t)?0:t});const u=n.reduce((p,q)=>p+q,0);e=o=='sum'?u:u/n.length}return{[b]:k,result:e}})}
+export default processCSV;
+// Generation time: 17.149s
+// Result: PASS
