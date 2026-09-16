@@ -9,6 +9,7 @@ SHARED_PROMPT: "Provide production-ready and maintainable JavaScript code. Apply
 The following models are included in the benchmark run.
 
 <!-- MODELS_START -->
+stealth/union-alpha EFF:high
 google/gemini-3.8-flash EFF:high
 google/gemini-3.7-flash EFF:high
 moonshotai/kimi-k3 EFF:medium
